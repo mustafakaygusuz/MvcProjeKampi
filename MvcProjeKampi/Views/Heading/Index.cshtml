@@ -136,11 +136,22 @@
                                         </i>
                                         Düzenle
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        Sil
-                                    </a>
+                                    @if (item.HeadingStatus == true)
+                                    {
+                                        <a class="btn btn-danger btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Pasif Et
+                                        </a>
+                                    }
+                                    @if (item.HeadingStatus == false)
+                                    {
+                                        <a class="btn btn-success btn-sm" href="/Heading/ActiveHeading/@item.HeadingID">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Aktif Et
+                                        </a>
+                                    }
                                 </td>
                             </tr>
                         }

@@ -37,6 +37,10 @@ namespace BusinessLayer.Concrete
         {
             _headingDal.Update(heading);
         }
+        public void HeadingActive(Heading heading)
+        {
+            _headingDal.Update(heading);
+        }
 
         public void HeadingUpdate(Heading heading)
         {
