@@ -110,7 +110,17 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    @item.HeadingStatus
+                                    @switch (item.HeadingStatus)
+                                    {
+                                        case true:
+                                            <span class="badge badge-success">Aktif</span>
+                                            break;
+                                        case false:
+                                            <span class="badge badge-danger">Pasif</span>
+                                            break;
+
+                                    }
+
                                 </td>
                                 <td class="project-state">
                                     <span class="@color">@item.Category.CategoryName</span>
